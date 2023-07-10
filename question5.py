@@ -5,6 +5,10 @@ app = Flask(__name__)
 post_arr=[]
 
 
+@app.route('/', methods=["GET"])
+def get():
+    return jsonify('Hello world')
+
 @app.route('/get', methods=["GET"])
 def gets():
     return jsonify(post_arr)
